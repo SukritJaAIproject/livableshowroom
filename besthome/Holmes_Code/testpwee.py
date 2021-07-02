@@ -1,29 +1,6 @@
-# from miio import Gateway
-#
-# gateway = Gateway("192.168.2.53", "776466463739795a4c61775161427071")
-#
-# gateway.discover_devices()
-# devices = gateway.devices
-#
-# for dev in devices:
-#     dev.update()
-#     print(dev)
 
 
 # from miio import Gateway
-#
-# gateway = Gateway("192.168.1.55", "776332343455735a6d4a73746b48694f")
-#
-# gateway.discover_devices()
-# devices = gateway.devices
-#
-# for dev in devices.values():
-#     dev.update()
-#     print(dev)
-
-# from miio import Gateway
-
-
 import time
 #
 # gateway = Gateway("192.168.1.55", "776332343455735a6d4a73746b48694f")
