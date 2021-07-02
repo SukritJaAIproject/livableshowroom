@@ -8,3 +8,4 @@ devices = gateway.devices
 for dev in devices.values():
     dev.update()
     print(dev)
+
