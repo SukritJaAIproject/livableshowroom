@@ -1,32 +1,29 @@
 import requests
 import json
 
-def acvalues():
+def acvalues(cookies, device):
     url = "https://www.activate-ac.com/dev/deviceStatusSetPointCurrentStatus"
     payload = {}
     headers = {
-        # 'Cookie': 'JSESSIONID=node0wos5fa4y5gvs47jcb9198e251124.node0'
-        'Cookie': 'JSESSIONID=node0v20qal2a1mlanau5oxhz8wr85932.node0' #PBase
+        'Cookie': 'JSESSIONID='+cookies
     }
 
     response = requests.request("GET", url, headers=headers, data=payload, verify=False)
     x1 = response.text
     x2 = json.loads(x1)
-    mode = x2[1]['deviceStatus']['deviceStatus']['mode']
-    fan = x2[1]['deviceStatus']['deviceStatus']['fan']
-    envTemp = x2[1]['deviceStatus']['deviceStatus']['envTemp']
-    envTempShow = x2[1]['deviceStatus']['deviceStatus']['envTempShow']
-    tgtTemp = x2[1]['deviceStatus']['deviceStatus']['tgtTemp']
-    onoff = x2[1]['deviceStatus']['deviceStatus']['onoff']
+    mode = x2[device]['deviceStatus']['deviceStatus']['mode']
+    fan = x2[device]['deviceStatus']['deviceStatus']['fan']
+    envTemp = x2[device]['deviceStatus']['deviceStatus']['envTemp']
+    envTempShow = x2[device]['deviceStatus']['deviceStatus']['envTempShow']
+    tgtTemp = x2[device]['deviceStatus']['deviceStatus']['tgtTemp']
+    onoff = x2[device]['deviceStatus']['deviceStatus']['onoff']
     return mode, fan, envTemp, envTempShow, tgtTemp, onoff
 
-def myagenttake(aitarget):
-    # url = "https://www.activate-ac.com/control/turnOnDevices?mac=C82B962C7F5C&rt=30&tmp="+str(aitarget)+"&mode=Cold&fan=1"
-    url = "https://www.activate-ac.com/control/turnOnDevices?mac=40F520381E9C&rt=30&tmp=" + str(aitarget) + "&mode=Cold&fan=1" #PBase
+def myagenttake(aitarget, macadd, cookies):
+    url = "https://www.activate-ac.com/control/turnOnDevices?mac="+macadd+"&rt=30&tmp=" + str(aitarget) + "&mode=Cold&fan=1" 
     payload = {}
     headers = {
-        # 'Cookie': 'JSESSIONID=node0wos5fa4y5gvs47jcb9198e251124.node0'
-        'Cookie': 'JSESSIONID=node0v20qal2a1mlanau5oxhz8wr85932.node0' #PBase
+    'Cookie': 'JSESSIONID='+cookies
     }
     response = requests.request("GET", url, headers=headers, data=payload, verify=False)
     return response
