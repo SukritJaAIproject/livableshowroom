@@ -6,8 +6,8 @@ from tensorflow.keras.optimizers import Adam
 from helper_function.acdata import *
 import time
 
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = 'gAmeVYhTTyVdMuYcXVMc'  # AC status
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'  # AC status
 
 client = mqtt.Client()
 client.username_pw_set(ACCESS_TOKEN)
