@@ -9,8 +9,8 @@ import time
 # print(acvalues('node0rn5sn3feu38d5rbgx853kmgc3181.node0', 0))
 # print(myagenttake(25, 'C82B962C7F5C', 'node0rn5sn3feu38d5rbgx853kmgc3181.node0'))
 
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = 'gAmeVYhTTyVdMuYcXVMc'  # AC status
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'  # AC status
 
 v = 0.1
 met = met_typical_tasks["Writing"]
