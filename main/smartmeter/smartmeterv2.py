@@ -4,8 +4,8 @@ from helper_function.thingb import *
 from helper_function.acdata import *
 import time
 
-client_id = 'ypgeygnjapkvce6p3uwb'
-secret = 'a5e85bedb96141e5846d0a04d4fba10d'
+client_id = 'YOUR_TUYA_CLIENT_ID'
+secret = 'YOUR_SECRET_KEY'
 base = 'https://openapi.tuyaus.com'
 device_id = 'eb20777ea024cd6513xszn'
 
@@ -41,8 +41,8 @@ def POST(url, headers={}, body={}):
   r = json.dumps(r.json(), indent=2, ensure_ascii=False) # Beautify the format of request result.
   return r
 
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = 'ivSOUVEah654Iyxd9HdF'  # AC status
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'  # AC status
 
 client = mqtt.Client()
 client.username_pw_set(ACCESS_TOKEN)
