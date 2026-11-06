@@ -5,7 +5,7 @@ import time
 
 urlenzy = "https://sedp-gw.egat.co.th/api/commontemp"
 
-api_key = "c8a441c6520d8a263990810629ac5c70"
+api_key = "YOUR_API_KEY"
 lat = "13.4300818"
 lon = "100.2467665"
 url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
