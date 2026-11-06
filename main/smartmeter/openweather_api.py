@@ -3,10 +3,10 @@ import paho.mqtt.client as mqtt
 import json
 import requests
 
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = 'JLeN19Z3YxwxJsDNBfcd'
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
 
-api_key = "c8a441c6520d8a263990810629ac5c70"
+api_key = "YOUR_API_KEY"
 lat = "13.8116043"
 lon = "100.368037"
 url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
