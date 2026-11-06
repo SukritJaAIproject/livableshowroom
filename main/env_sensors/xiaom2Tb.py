@@ -3,8 +3,8 @@ import paho.mqtt.client as mqtt
 import json
 from miio import Gateway
 
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = 'tQlxqQkPIFyCyAxzD0M4'
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
 INTERVAL=60*15
 
 next_reading = time.time()
@@ -13,7 +13,7 @@ client.username_pw_set(ACCESS_TOKEN)
 client.connect(THINGSBOARD_HOST, 1883, 60)
 client.loop_start()
 
-gateway = Gateway("192.168.1.41", "4f3330576b7978614663343033454231")
+gateway = Gateway("192.168.1.41", "YOUR_SECRET_KEY")
 gateway.discover_devices()
 devices = gateway.devices
 
