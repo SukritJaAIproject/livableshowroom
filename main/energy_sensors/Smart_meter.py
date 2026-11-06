@@ -6,6 +6,6 @@ d.set_version(3.3)
 data = d.status()
 print('set_status() result %r' % data)
 
-# Access ID/Client ID: s8safukeaoi1ftqpwnkx
-# Access Secret/Client Secret: 71c1cc7159c14776893d810fa73f749c
+# Access ID/Client ID: YOUR_TUYA_CLIENT_ID
+# Access Secret/Client Secret: YOUR_SECRET_KEY
 
