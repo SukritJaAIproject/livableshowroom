@@ -21,8 +21,8 @@ import datetime
 from pvlib.forecast import GFS, NAM, NDFD, HRRR, RAP
 
 latitude, longitude, tz = 15.13, 101.52, 'Asia/Jakarta'
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = '2S3XhvVfubWjU7XxGA8p'
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
 
 client = mqtt.Client()
 client.username_pw_set(ACCESS_TOKEN)
