@@ -5,8 +5,8 @@ import datetime
 
 def tokendata():
     BASE_URL = 'https://things.egat.co.th'
-    USERNAME = 'sukrit.jai@egat.co.th'
-    PASSWORD = 'Sj@scg19'
+    USERNAME = 'YOUR_THINGSBOARD_USERNAME'
+    PASSWORD = 'YOUR_THINGSBOARD_PASSWORD'
 
     headers = {'Content-Type': 'application/json','Accept': 'application/json'}
     data = '{"username":"'+ USERNAME + '", "password":"' + PASSWORD + '"}'
