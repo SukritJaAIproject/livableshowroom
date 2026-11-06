@@ -1,6 +1,6 @@
 # Authorization key obtained from the cloud development project
-client_id = 'ypgeygnjapkvce6p3uwb'
-secret = 'a5e85bedb96141e5846d0a04d4fba10d'
+client_id = 'YOUR_TUYA_CLIENT_ID'
+secret = 'YOUR_SECRET_KEY'
 
 # Call the APIs according to your region.
 # China https://openapi.tuyacn.com
@@ -77,13 +77,13 @@ print('sign', calc_sign(client_id+res['access_token']+t, secret))
 #
 # headers = {
 #     'sign_method': 'HMAC-SHA256',
-#     'client_id': 'ypgeygnjapkvce6p3uwb',
+#     'client_id': 'YOUR_TUYA_CLIENT_ID',
 #     't': '1625587043921',
 #     'mode': 'cors',
 #     'Content-Type': 'application/json',
 #     # 'sign': '05E1D154D35FD7B4151363CFE9485E4B14D1EE9E88B876A1F0425623BF71139F',
 #     'sign': calc_sign(client_id+res['access_token']+t, secret),
-#     # 'access_token': 'c381fe456c3fe8002c1aefb93dde52c6',
+#     # 'access_token': 'YOUR_ACCESS_TOKEN',
 #     'access_token': res['access_token'],
 # }
 #
@@ -118,8 +118,8 @@ from helper_function.thingb import *
 from helper_function.acdata import *
 import time
 
-THINGSBOARD_HOST = 'mqtt.egat.co.th'
-ACCESS_TOKEN = 'ivSOUVEah654Iyxd9HdF'  # AC status
+THINGSBOARD_HOST = 'YOUR_THINGSBOARD_HOST'
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'  # AC status
 
 client = mqtt.Client()
 client.username_pw_set(ACCESS_TOKEN)
