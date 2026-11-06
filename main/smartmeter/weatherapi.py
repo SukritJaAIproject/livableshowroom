@@ -4,8 +4,8 @@ import json
 import time
 
 
-ACCESS_TOKEN = 'YY1PzzravgsxTNm1g3x9'  # Token of your device
-broker = "mqtt.egat.co.th"  # host name
+ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'  # Token of your device
+broker = "YOUR_THINGSBOARD_HOST"  # host name
 port = 1883  # data listening port
 
 
@@ -23,7 +23,7 @@ client1.connect(broker, port, keepalive=60)  # establish connection
 url = "https://api.ambeedata.com/weather/latest/by-lat-lng"
 querystring = {"lat":"13.4300818","lng":"100.2467665"}
 headers = {
-    'x-api-key': "iqIH5Z5TiqaVKIZGuvCtn24e7l7ot4naP9mzLoMb",
+    'x-api-key': "YOUR_API_KEY",
     'Content-type': "application/json"
     }
 
