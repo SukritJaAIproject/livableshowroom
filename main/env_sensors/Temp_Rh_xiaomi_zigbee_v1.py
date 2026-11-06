@@ -1,6 +1,6 @@
 from miio import Gateway
 
-gateway = Gateway("192.168.1.41", "4f3330576b7978614663343033454231",lazy_discover=True, start_id=1000)
+gateway = Gateway("192.168.1.41", "YOUR_SECRET_KEY",lazy_discover=True, start_id=1000)
 
 gateway.discover_devices()
 devices = gateway.devices
